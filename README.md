@@ -27,3 +27,7 @@ A segunda página principal é a dashboard user, ambos admin e user terão acess
 ![ProNMS](http://www.pronms.com/en-us/wp-content/uploads/2013/07/Windows-DHCP-Log-Analyser-Dashboard.png)
 ![SecurityCenter](https://www.tenable.com/sites/drupal.dmz.tenablesecurity.com/files/images/sc-dashboards/Screen%20Shot%202014-08-14%20at%202.14.41%20PM_0.png)
 ![Splunk](https://cdn.apps.splunk.com/media/public/screenshots/6d690a3a-6900-11e3-b4de-005056ad5c72.png)
+
+## Esboço:
+![PT.1](resources/esboço_1.jpeg)
+![PT.1](resources/esboço_2.jpeg)
