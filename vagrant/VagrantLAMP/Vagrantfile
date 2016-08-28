@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  config.vm.synced_folder ".", "/var/www/html/src"
+  config.vm.synced_folder ".", "/var/www/html/src/"
 
   config.vm.provider "virtualbox" do |vb|
     vb.name = "LAMP VM"
@@ -39,7 +39,7 @@ Vagrant.configure(2) do |config|
 
     sudo service apache2 restart > /dev/null
     echo "Finish Installing LAMP!!!"
-    
+
     echo "Open http://localhost:8080/info.php"
 
   SHELL
