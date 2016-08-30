@@ -82,7 +82,7 @@ $DBcon->close();
     <div class="container" style=
     "margin-top:150px;text-align:center;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
     <?php
-      $output = shell_exec('ls -lart');
+      $output = shell_exec('service isc-dhcp-server status');
       echo "<pre>$output</pre>";
     ?>
     </div>
