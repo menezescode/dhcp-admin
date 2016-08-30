@@ -42,20 +42,20 @@ $DBcon->close();
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href=
-                        "">
-                        Back to Article</a>
+                        "#">
+                        Dashboard</a>
                     </li>
 
 
                     <li>
                         <a href=
-                        "http://www.codingcage.com/search/label/jQuery">jQuery</a>
+                        "#">Configuração</a>
                     </li>
 
 
                     <li>
                         <a href=
-                        "http://www.codingcage.com/search/label/PHP">PHP</a>
+                        "#">Log</a>
                     </li>
                 </ul>
 
