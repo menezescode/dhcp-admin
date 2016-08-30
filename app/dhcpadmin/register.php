@@ -21,7 +21,7 @@ if(isset($_POST['btn-signup'])) {
 
   $check_email = $DBcon->query("SELECT email FROM tbl_users WHERE email='$email'");
   $count=$check_email->num_rows;
-
+  
   if ($count==0) {
     $query = "INSERT INTO tbl_users(username,email,password) VALUES('$uname','$email','$hashed_password')";
 

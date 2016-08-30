@@ -35,16 +35,14 @@ $DBcon->close();
                 "collapse" type="button"><span class="sr-only">Toggle
                 navigation</span> <span class="icon-bar"></span> <span class=
                 "icon-bar"></span> <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="http://www.codingcage.com">Coding
-                Cage</a>
+                <a class="navbar-brand" href="home.php">DHCP Admin</a>
             </div>
-
 
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href=
-                        "http://www.codingcage.com/2015/03/simple-login-and-signup-system-with-php.html">
+                        "">
                         Back to Article</a>
                     </li>
 
@@ -83,12 +81,10 @@ $DBcon->close();
 
     <div class="container" style=
     "margin-top:150px;text-align:center;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
-    <a href="http://www.codingcage.com/">Coding Cage - Programming Blog</a><br>
-
-        <br>
-
-
-        <p>Tutorials on PHP, MySQL, Ajax, jQuery, Web Design and more...</p>
+    <?php
+      $output = shell_exec('ls -lart');
+      echo "<pre>$output</pre>";
+    ?>
     </div>
 </body>
 </html>

@@ -80,6 +80,7 @@ if (isset($_POST['btn-login'])) {
                     "glyphicon glyphicon-log-in"></span> &nbsp; Entrar</button>
                     <a class="btn btn-default" href="register.php">Cadastre-se
                     aqui</a>
+                    <a class="btn btn-default" href="esquecisenha.php">Esqueci minha senha</a>
                 </div>
             </form>
         </div>
