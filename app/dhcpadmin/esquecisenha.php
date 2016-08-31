@@ -42,7 +42,10 @@ if(isset($_POST['btn-submit'])) {
   if ($count == 1 ){
     $message = "Olá, $email
     <br /><br />
-    <a href='http://localhost:8080/src/dhcpadmin/resetarsenha.php?email=$email'>Clique aqui para resetar sua senha.</a>
+    Clique <a href='http://localhost:8080/src/dhcpadmin/resetarsenha.php?email=$email'>aqui</a>
+     para resetar sua senha.
+    <br /><br />
+    Suporte - DHCP Admin
     ";
     $subject = "Resetar Senha";
 
