@@ -1,0 +1,12 @@
+{
+    "name": "vagrant/dhcpadmin",
+    "authors": [
+        {
+            "name": "Andre Menezes",
+            "email": "andre@dhcpadmin.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^5.2"
+    }
+}
