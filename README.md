@@ -34,10 +34,10 @@ A segunda página principal é a dashboard user, ambos admin e user terão acess
 
 ## Requisitos mínimos
 
-  > Conexão com a internet (Apenas durante instalação de máquina virtual);
-  > Vagrant 1.7.4 ou superior instalado;
-  > Ambiente de virtualização compatível com versão 1.7.4 do Vagrant (O VirtualBox foi utilizado para este sistema);
-  > Versão mais atual do web browser Google Chrome, Mozilla Firefox ou Safari.
+  > * Conexão com a internet (Apenas durante instalação de máquina virtual);
+  > * Vagrant 1.7.4 ou superior instalado;
+  > * Ambiente de virtualização compatível com versão 1.7.4 do Vagrant (O VirtualBox foi utilizado para este sistema);
+  > * Versão mais atual do web browser Google Chrome, Mozilla Firefox ou Safari.
 
 
 
