@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
     config.vm.network "public_network", ip: "192.168.0.17"
     config.vm.synced_folder "../../app/", "/var/www/html/src/"
     config.vm.provider "virtualbox" do |vb|
-      vb.name = "LAMP DHCP - VM"
+      vb.name = "dhcpserver"
   end
 
   config.vm.provision "shell", inline: <<-SHELL
@@ -67,7 +67,7 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
     range 192.168.0.50 192.168.0.250;
 }
 EOF
-
+    sudo service isc-dhcp-server start
     echo "Open http://localhost:8080/info.php"
 
   SHELL
