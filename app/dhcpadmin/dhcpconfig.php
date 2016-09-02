@@ -42,8 +42,6 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- sweetalert -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
-    <!-- chosen -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.jquery.js"></script>
 
     <title>Welcome - <?php echo $userRow['email']; ?></title>
 
@@ -55,8 +53,7 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     rel="stylesheet">
     <!-- Sweetalert -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
-    <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.css">
+
 </head>
 
 <body>
@@ -92,7 +89,7 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#"><span class=
+                        <a href="profile.php"><span class=
                         "glyphicon glyphicon-user"></span>&nbsp;
                         <?php echo $userRow['username']; ?></a>
                     </li>
@@ -114,21 +111,7 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     <button type="submit" id="btn-service-stop" onclick="ajaxStop()" class="btn btn-danger">Stop</button>
     </div>
 
-    <!-- <div class="container" style=
-    "margin-top:50px;text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
-    <h4>Configurações do Servidor DHCP</h4>
-    <select class="chzn-select" name="faculty" style="width:300px;">
-        <option value="eth0">INTERFACE - eth0</option>
-        <option value="eth1">INTERFACE - eth1</option>
-    </select>
-    </div> -->
-
-
     <script>
-    $(function() {
-      $(".chzn-select").chosen();
-    });
-
     function ajaxStart() {
       $.ajax({ url: 'dhcpconfig.php',
            data: {action: 'start'},

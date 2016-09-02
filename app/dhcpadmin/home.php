@@ -59,7 +59,7 @@ $DBcon->close();
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#"><span class=
+                        <a href="profile.php"><span class=
                         "glyphicon glyphicon-user"></span>&nbsp;
                         <?php echo $userRow['username']; ?></a>
                     </li>

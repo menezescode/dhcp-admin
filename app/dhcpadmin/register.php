@@ -21,20 +21,28 @@ if(isset($_POST['btn-signup'])) {
 
   $check_email = $DBcon->query("SELECT email FROM tbl_users WHERE email='$email'");
   $count=$check_email->num_rows;
-  
+
   if ($count==0) {
     $query = "INSERT INTO tbl_users(username,email,password) VALUES('$uname','$email','$hashed_password')";
 
     if ($DBcon->query($query)) {
-      $msg = "<div class='alert alert-success'>
-              <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Usuário cadastrado com sucesso!
-              </div>";
+      $recebeIdQuery = $DBcon->query("SELECT * FROM tbl_users WHERE email='$email'");
+      $idRow = $recebeIdQuery->fetch_array();
+      $id = (int)$idRow['user_id'];
+
+      $cria = "INSERT INTO tbl_user_info(u_id, endereco, cep, empresa, codigo)
+               VALUES($id, DEFAULT, DEFAULT, DEFAULT, DEFAULT)";
+
+      if ($DBcon->query($cria)){
+        $msg = "<div class='alert alert-success'>
+                <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Usuário cadastrado com sucesso!
+                </div>";
+      }
     } else {
       $msg = "<div class='alert alert-danger'>
               <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Desculpe, não foi possivel completar o seu cadastro!
               </div>";
       }
-
     } else {
         $msg = "<div class='alert alert-danger'>
                 <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Descuple, já existe uma conta com este email.

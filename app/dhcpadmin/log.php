@@ -1,3 +1,17 @@
+<?php
+session_start();
+include_once 'dbconnect.php';
+
+if (!isset($_SESSION['userSession'])) {
+ header("Location: index.php");
+}
+
+$query = $DBcon->query("SELECT * FROM tbl_users WHERE user_id=".$_SESSION['userSession']);
+$userRow=$query->fetch_array();
+$DBcon->close();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +59,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#"><span class=
+                        <a href="profile.php"><span class=
                         "glyphicon glyphicon-user"></span>&nbsp;
                         <?php echo $userRow['username']; ?></a>
                     </li>
