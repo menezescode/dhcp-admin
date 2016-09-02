@@ -74,7 +74,62 @@ $DBcon->close();
     </nav>
 
     <div class="container" style=
-    "margin-top:50px;text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
+    "margin-top:50px;text-align:left;font-family:Verdana, Geneva, sans-serif;">
+    <h3>Server Options:</h3>
+    <table class="table table-bordered" style="margin-bottom:0px;">
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default Lease Time</td>
+          <td>600</td>
+        </tr>
+        <tr>
+          <td>Max Lease Time</td>
+          <td>7200</td>
+        </tr>
+        <tr>
+          <td>Authoritative</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Subnet-mask</td>
+          <td>255.255.255.0</td>
+        </tr>
+        <tr>
+          <td>Broadcast-address</td>
+          <td>192.168.1.255</td>
+        </tr>
+        <tr>
+          <td>Routers</td>
+          <td>192.168.1.254</td>
+        </tr>
+        <tr>
+          <td>DNS</td>
+          <td>192.168.1.1</td>
+        </tr>
+        <tr>
+          <td>Domain Name</td>
+          <td>mydomain.example</td>
+        </tr>
+        <tr>
+          <td>Subnet</td>
+          <td>192.168.0.0</td>
+        </tr>
+        <tr>
+          <td>Subnet Mask</td>
+          <td>255.255.255.0</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="container" style=
+    "text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
     <h3>Server Status:</h3>
     <?php
       $output = shell_exec('service isc-dhcp-server status');
