@@ -7,21 +7,13 @@
 ## Descrição do Projeto:
 
 O projeto consiste na criação de uma interface web para gerenciar o software isc-dhcp-server.
-A iterface, chamada de webdhcp-admin, poderá ser acessada por 2 tipos de usuários: admin e user. 
-Sendo o usuário admin aquele responsável pelas seguintes configurações do serviço DHCP:
-* Configurações de domínio;
-* Configurações de dns;
-* Tempo de empréstimo padrão;
-* Tempo máximo de empréstimo;
-* Escopo DHCP.
-
-Todas as configurações serão feitas na página dashboard admin.
-A segunda página principal é a dashboard user, ambos admin e user terão acesso a página que irá dispor de informações relacionadas ao serviço dhcp:
-* Vizualização das configurações;
-* Vizualiação de gráficos:
-  - Consumo do dhcp;
-  - IPs concedidos;
-  - Gráfico de emprestimo/tempo;
+A interface, chamada de dhcp-admin, poderá ser acessada por usuários cadastrados no sistema. 
+Sendo o usuário capáz de realizar as seguintes operações:
+* Visualizar as configurações estáticas do servidor;
+* Visualizar status do serviço;
+* Visualizar os emprestimos do serviço.
+Todas as visualizações serão feitas na página dashboard.
+A segunda página principal é a de configuração, onde o usuário poderá iniciar, reiniciar ou parar o serviço.
 
 ## O projeto se baseia nos seguintes templates:
 ![ProNMS](http://www.pronms.com/en-us/wp-content/uploads/2013/07/Windows-DHCP-Log-Analyser-Dashboard.png)
@@ -39,9 +31,7 @@ A segunda página principal é a dashboard user, ambos admin e user terão acess
   > * Ambiente de virtualização compatível com versão 1.7.4 do Vagrant (O VirtualBox foi utilizado para este sistema);
   > * Versão mais atual do web browser Google Chrome, Mozilla Firefox ou Safari.
 
-
-
-## Getting started
+# Getting started
 
   > Para utilizar o sistema desenvolvido é necessário executar os passos a seguir:
 
