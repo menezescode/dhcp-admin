@@ -86,7 +86,7 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
 
                     <li>
                         <a href=
-                        "editor.php">Editor</a>
+                        "log.php">Log</a>
                     </li>
                 </ul>
 

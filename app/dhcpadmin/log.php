@@ -39,7 +39,7 @@
 
                     <li class="active">
                         <a href=
-                        "editor.php">Editor</a>
+                        "editor.php">Log</a>
                     </li>
                 </ul>
 
@@ -58,5 +58,15 @@
             </div>
         </div>
     </nav>
+
+    <div class="container" style=
+    "text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
+    <h3>Log:</h3>
+    <?php
+      $output = shell_exec('sudo tail /var/log/syslog | grep dhcpd');
+      echo "<pre>$output</pre>";
+    ?>
+    </div>
+
 </body>
 </html>
