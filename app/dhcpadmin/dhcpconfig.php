@@ -107,21 +107,21 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     </nav>
 
     <div class="container" style=
-    "margin-top:50px;text-align:center;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
+    "margin-top:250px;text-align:center;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
     <h3>Alterar Status do Serviço DHCP</h3>
     <button type="button" id="btn-service-start" onclick="ajaxStart()" class="btn btn-success">Start</button>
     <button type="sumit" id="btn-service-restart" onclick="ajaxRestart()" class="btn btn-warning">Restart</button>
     <button type="submit" id="btn-service-stop" onclick="ajaxStop()" class="btn btn-danger">Stop</button>
     </div>
 
-    <div class="container" style=
+    <!-- <div class="container" style=
     "margin-top:50px;text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
     <h4>Configurações do Servidor DHCP</h4>
     <select class="chzn-select" name="faculty" style="width:300px;">
         <option value="eth0">INTERFACE - eth0</option>
         <option value="eth1">INTERFACE - eth1</option>
     </select>
-    </div>
+    </div> -->
 
 
     <script>
