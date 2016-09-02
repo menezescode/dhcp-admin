@@ -126,7 +126,7 @@
         <option value="xml">Exportar XML</option>
       </select>
       <button class="btn btn-success btn-primary" name="btn-export" type=
-      "submit">Exportar</button>
+      "button"><a href="expjson.php">Exportar</a></button>
     </form>
     </div>
 
