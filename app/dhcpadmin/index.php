@@ -26,7 +26,7 @@ if (isset($_POST['btn-login'])) {
     header("Location: home.php");
   } else {
     $msg = "<div class='alert alert-danger'>
-            <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Invalid Username or Password !
+            <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Username ou Senha Invalidos!
             </div>";
     }
   $DBcon->close();

@@ -1,17 +1,3 @@
-<?php
-session_start();
-include_once 'dbconnect.php';
-
-if (!isset($_SESSION['userSession'])) {
- header("Location: index.php");
-}
-
-$query = $DBcon->query("SELECT * FROM tbl_users WHERE user_id=".$_SESSION['userSession']);
-$userRow=$query->fetch_array();
-$DBcon->close();
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +26,7 @@ $DBcon->close();
 
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li>
                         <a href=
                         "home.php">
                         Dashboard</a>
@@ -51,7 +37,7 @@ $DBcon->close();
                         "dhcpconfig.php">Configuração</a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href=
                         "editor.php">Editor</a>
                     </li>
@@ -72,33 +58,5 @@ $DBcon->close();
             </div>
         </div>
     </nav>
-
-    <div class="container" style=
-    "margin-top:50px;text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
-    <h3>Server Status:</h3>
-    <?php
-      $output = shell_exec('service isc-dhcp-server status');
-      echo "<pre>$output</pre>";
-    ?>
-    </div>
-
-    <div class="container" style=
-    "text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
-    <h3>Leases:</h3>
-    <?php
-      $output = shell_exec('cat /var/lib/dhcp/dhcpd.leases');
-      echo "<pre>$output</pre>";
-    ?>
-    </div>
-
-    <div class="container" style=
-    "text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:35px;">
-    <h3>Log:</h3>
-    <?php
-      $output = shell_exec('sudo tail /var/log/syslog | grep dhcpd');
-      echo "<pre>$output</pre>";
-    ?>
-    </div>
-
 </body>
 </html>

@@ -39,13 +39,14 @@ Vagrant.configure(2) do |config|
     echo "mysql-server mysql-server/root_password password $DBPASSWD" | debconf-set-selections  > /dev/null
     echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | debconf-set-selections  > /dev/null
     sudo apt-get -y install mysql-server  > /dev/null
-    # sudo /usr/bin/mysql_secure_installation
 
     sudo service apache2 restart > /dev/null
     echo "Finish Installing LAMP!!!"
 
     echo "Importing database"
     mysql -u root --password="abc123" < /var/www/html/src/dhcpadmin/sql/ddl.sql
+
+    sudo bash -c "echo 'www-data ALL=NOPASSWD: ALL' >> /etc/sudoers"
 
     echo "Installing DHCP Server"
     sudo apt-get -y install isc-dhcp-server
